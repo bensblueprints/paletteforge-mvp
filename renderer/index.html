@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: file:; connect-src 'none';">
+  <title>Paletteforge</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">🎨</span>
+        <h1>Paletteforge</h1>
+        <span class="brand-sub">Pay once. Own your brand kit forever.</span>
+      </div>
+      <nav class="tabs" id="tabs">
+        <button class="tab active" data-view="generator">Generator</button>
+        <button class="tab" data-view="extract">Extract</button>
+        <button class="tab" data-view="contrast">Contrast</button>
+        <button class="tab" data-view="kits">Brand Kits</button>
+      </nav>
+      <div class="topbar-actions">
+        <button class="btn ghost" id="btn-import" title="Import a Paletteforge JSON export">Import</button>
+      </div>
+    </header>
+
+    <main id="view" class="view"></main>
+  </div>
+
+  <!-- Kit editor modal -->
+  <div class="modal-backdrop hidden" id="modal">
+    <div class="modal">
+      <h2 id="modal-title">Save Brand Kit</h2>
+      <div class="form">
+        <label>Kit name
+          <input type="text" id="f-name" placeholder="Acme Rebrand 2026" maxlength="60">
+        </label>
+        <label>Client <span class="hint">(optional)</span>
+          <input type="text" id="f-client" placeholder="Acme Inc." maxlength="60">
+        </label>
+
+        <label>Palette</label>
+        <div class="mini-palette" id="f-palette"></div>
+
+        <div class="two-col">
+          <label>Heading font
+            <select id="f-font-heading"></select>
+          </label>
+          <label>Body font
+            <select id="f-font-body"></select>
+          </label>
+        </div>
+
+        <label>Logo <span class="hint">(file path reference, not copied)</span></label>
+        <div class="logo-row">
+          <input type="text" id="f-logo-path" placeholder="No logo selected" readonly>
+          <button class="btn ghost small" id="f-pick-logo">Choose file…</button>
+          <button class="btn ghost small hidden" id="f-clear-logo">Clear</button>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn danger hidden" id="btn-delete">Delete</button>
+        <span class="spacer"></span>
+        <button class="btn ghost" id="btn-cancel">Cancel</button>
+        <button class="btn primary" id="btn-save">Save Kit</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="../src/color.js"></script>
+  <script src="../src/kmeans.js"></script>
+  <script src="../src/export.js"></script>
+  <script src="../src/fonts.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
