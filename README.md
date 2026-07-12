@@ -12,7 +12,7 @@ Coolors Pro charges **$5–10/month, forever**, for a color wheel and an export 
 
 Don't want to touch a terminal? Grab the packaged Windows installer (and support development):
 
-**→ [Get Paletteforge on Whop](https://whop.com/onetime-suite)** — pay once, own it forever.
+**→ [Get Paletteforge on Whop](https://whop.com/benjisaiempire/paletteforge)** — pay once, own it forever.
 
 ## Features
 
