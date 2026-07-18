@@ -1,5 +1,9 @@
 # 🎨 Paletteforge
 
+## Demo
+
+VIDEO-PLACEHOLDER
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 **The desktop color palette generator and brand kit organizer you buy once and own forever.** Harmony-based palette generation, image color extraction, a real WCAG contrast checker, brand kits with fonts and logo references, and export to CSS/Tailwind/JSON/ASE — 100% local, zero subscription, zero cloud, zero telemetry.
